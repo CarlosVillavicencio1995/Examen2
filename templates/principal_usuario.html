@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{%extends "master.html"%}
+{% block contenido%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>LISTADO DE ESTUDIATES</h1>
+<div align="center">
+    <table class="table">
+    <thead class="thead-dark">>
+    <th>Cedula</th>
+    <th>Nombres</th>
+    <th>Apellido Paterno</th>
+    <th>Apellido Materno</th>
+    <th>Sexo</th>
+    <th>Estado</th>
+
+    </thead>
+
+    {% for c in lista%}
+    <tr>
+
+        <td>{{c.cedula}}</td>
+        <td>{{c.nombres}}</td>
+        <td>{{c.apellidoPaterno}}</td>
+        <td>{{c.apellidoMaterno}}</td>
+        <td>{{c.Sexo}}</td>
+        <td>{{c.estado}}</td>
+        <!--<td><a href="modificar?cedula={{c.cedula}}">Modificar</a></td>
+        <td><a href="eliminar?cedula={{c.cedula}}">Eliminar</a></td>-->
+     </tr>
+    {%endfor%}
+
+</table>
+</div>
+</body>
+</html>
+{% endblock %}
